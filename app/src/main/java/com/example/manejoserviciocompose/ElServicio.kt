@@ -24,12 +24,15 @@ class ElServicio: Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        if (intent!!.extras!!.getString(MainActivity.MYDEFAULTSTRING_ID).equals(R.string.key1.toString())) {
-            Toast.makeText(this, R.string.audioinc, Toast.LENGTH_LONG).show()
-            player1.start()
-        } else if (intent.extras!!.getString(MainActivity.MYDEFAULTSTRING_ID).equals(R.string.key2.toString())) {
-            Toast.makeText(this, R.string.songinc, Toast.LENGTH_LONG).show()
-            player2.start()
+        when (intent!!.extras!!.getString(MainActivity.MYDEFAULTSTRING_ID)) {
+            R.string.key1.toString() -> {
+                Toast.makeText(this, R.string.audioinc, Toast.LENGTH_LONG).show()
+                player1.start()
+            }
+            R.string.key2.toString() -> {
+                Toast.makeText(this, R.string.songinc, Toast.LENGTH_LONG).show()
+                player2 . start ()
+            }
         }
         return startId
     }
