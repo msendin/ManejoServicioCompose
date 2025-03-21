@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ManejoServicioKotlin</string>
+    <string name="goal">Utilizacion de Servicios</string>
+    <string name="creaserv">Servicio creado</string>
+    <string name="finaserv">Servicio finalizado</string>
+    <string name="iniserv">Servicio iniciado</string>
+
+    <string name="boton1">Inicio Sonido</string>
+    <string name="boton2">Inicio Cancion</string>
+    <string name="boton3">DETENER</string>
+
+    <string name="key1">Iniciar Sonido</string>
+    <string name="key2">Iniciar Cancion</string>
+
+    <string name="songinc">Servicio Cancion Iniciado</string>
+    <string name="audioinc">Servicio Sonido Iniciado</string>">
+    <string name="finser">Detener</string>
+</resources>
