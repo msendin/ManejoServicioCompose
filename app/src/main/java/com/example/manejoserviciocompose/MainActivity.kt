@@ -19,6 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.manejoserviciocompose.ui.theme.ManejoServicioComposeTheme
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Surface
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +28,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ManejoServicioComposeTheme {
-                //Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Surface {
                     Replaying(
                         modifier = Modifier.fillMaxSize()
                     )
                 }
             }
+        }
     }
 
 

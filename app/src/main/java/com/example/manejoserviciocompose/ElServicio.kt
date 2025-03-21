@@ -16,7 +16,6 @@ class ElServicio: Service() {
     }
 
     override fun onCreate() {
-        super.onCreate()
         Toast.makeText(this, R.string.creaserv, Toast.LENGTH_LONG).show()
         player1 = MediaPlayer.create(this, R.raw.train)
         player1.setLooping(true)
@@ -25,7 +24,6 @@ class ElServicio: Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        super.onStartCommand(intent, flags, startId)
         if (intent!!.extras!!.getString(MainActivity.MYDEFAULTSTRING_ID).equals(R.string.key1.toString())) {
             Toast.makeText(this, R.string.audioinc, Toast.LENGTH_LONG).show()
             player1.start()
@@ -37,7 +35,6 @@ class ElServicio: Service() {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         Toast.makeText(this, R.string.finaserv, Toast.LENGTH_LONG).show()
         if (player1.isPlaying) player1.stop()
         if (player2.isPlaying) player2.stop()
